@@ -279,7 +279,8 @@ server.on('request', async (req, res) => {
     }
 
     res.statusCode = 200; // OK
-    res.write(count > 1 ? `${count} files uploaded!` : 'File uploaded!');
+    // res.write(count > 1 ? `${count} files uploaded!` : 'File uploaded!');
+    res.write('{"code":200}')
     res.end();
 
   } else {
